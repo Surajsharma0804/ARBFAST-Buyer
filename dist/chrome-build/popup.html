@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARBFAST BUYER</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>ARBFAST BUYER</h1>
+
+            <div class="status">
+                Status:
+                <span id="status" class="stopped">Stopped</span>
+            </div>
+            <div class="field">
+                <label for="amount">Amount (exact match)</label>
+                <input id="amount" type="number" value="1000" min="1" placeholder="e.g. 1000" />
+            </div>
+
+            <div class="field">
+                <label for="delay">Interval (ms)</label>
+                <input id="delay" type="number" value="500" />
+            </div>
+
+            <div class="field">
+                <label for="reloadType">Reload Button</label>
+                <select id="reloadType">
+                    <option value="NONE">None</option>
+                    <option value="OTP" selected>OTP</option>
+                    <option value="BANK">Bank</option>
+                </select>
+            </div>
+            <button id="toggle" class="start">Start</button>
+            <a id="open-arb" href="https://arbpay.me" target="_blank" rel="noopener noreferrer" class="trade-btn">
+                Open ARB
+            </a>
+            <div class="footer">Buys: <span id="count">0</span></div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #f4f6fa;
+}
+
+.container {
+    width: 260px;
+    padding: 16px;
+}
+
+h1 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 12px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 7px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.status {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.status span {
+    font-weight: bold;
+}
+
+.running {
+    color: #2ecc71;
+}
+
+.stopped {
+    color: #e74c3c;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button.start {
+    background: #2ecc71;
+    color: white;
+}
+
+button.stop {
+    background: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+}
+
+.trade-btn {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    margin: 6px 0 12px;
+    text-align: center;
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trade-btn:hover {
+    background: #f3f4f6;
+}
+
+.trade-btn:active {
+    transform: scale(0.98);
+}
+
+.grid-cols-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+select {
+    width: 100%;
+    padding: 7px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background: white;
+}
