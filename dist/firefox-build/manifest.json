@@ -8,17 +8,15 @@
   "action": { "default_popup": "popup.html" },
   "browser_specific_settings": {
     "gecko": {
-      "id": "arb-buyer@arbpay",
-      "strict_min_version": "109.0",
-      "data_collection_permissions": {
-        "required": ["none"],
-        "optional": []
-      }
+      "id": "arbfast-buyer@arbpay.me",
+      "strict_min_version": "109.0"
     }
   },
   "icons": {
-    "48":   "icon48.png",
-    "96":   "icon96.png",
-    "128":  "icon128.png"
-  }
+    "48":  "icon48.png",
+    "96":  "icon96.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [],
+  "web_accessible_resources": []
 }

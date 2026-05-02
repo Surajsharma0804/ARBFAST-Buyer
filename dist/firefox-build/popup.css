@@ -2,7 +2,8 @@
    ARBFast Buyer v1.5 — Premium Dark Theme
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* No external @import — MV3 CSP blocks remote stylesheets.
+   Inter is pre-installed on Windows 11 / Edge. Fallback chain covers all OS. */
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,7 +26,7 @@
   --text-label: #8896b3;
   --radius:     14px;
   --radius-sm:  8px;
-  --font:       'Inter', system-ui, sans-serif;
+  --font:       'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -142,9 +143,7 @@ body {
   75%       { transform: translateY(calc(-50% + 3px)) rotate(2deg); }
 }
 
-.plane-wrap.flying {
-  animation: flyAcross 1.6s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
-}
+/* (flyAcross defined above, no duplicate needed) */
 
 /* ── Main Popup Card ── */
 .popup {
