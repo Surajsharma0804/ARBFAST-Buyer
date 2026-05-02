@@ -1,4 +1,4 @@
-// ARBFast Buyer v1.4 — content.js (exact amount match only)
+// ARBFast Buyer v1.5 — content.js (exact amount match only)
 let arbInterval = null;
 let buyCount    = 0;
 let observer    = null;

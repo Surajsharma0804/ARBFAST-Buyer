@@ -1,44 +1,107 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ARBFAST BUYER</title>
-        <link rel="stylesheet" href="popup.css" />
-    </head>
-    <body>
-        <div class="container">
-            <h1>ARBFAST BUYER</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARBFast Buyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
 
-            <div class="status">
-                Status:
-                <span id="status" class="stopped">Stopped</span>
-            </div>
-            <div class="field">
-                <label for="amount">Amount (exact match)</label>
-                <input id="amount" type="number" value="1000" min="1" placeholder="e.g. 1000" />
-            </div>
+    <!-- ── Animated sky background particles ── -->
+    <div class="bg-stars">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-            <div class="field">
-                <label for="delay">Interval (ms)</label>
-                <input id="delay" type="number" value="500" />
-            </div>
+    <!-- ── Airplane animation layer ── -->
+    <div class="sky-lane" id="skyLane" aria-hidden="true">
+      <div class="plane-wrap" id="planeWrap">
+        <!-- SVG Paper Plane -->
+        <svg class="plane-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="2,32 62,12 50,32 62,52" fill="#00d4ff" opacity="0.95"/>
+          <polygon points="2,32 62,12 50,32" fill="#ffffff" opacity="0.3"/>
+          <!-- trail dots -->
+          <circle cx="-8"  cy="32" r="2.5" fill="#00d4ff" opacity="0.6"/>
+          <circle cx="-18" cy="32" r="1.8" fill="#00d4ff" opacity="0.4"/>
+          <circle cx="-26" cy="32" r="1.2" fill="#00d4ff" opacity="0.2"/>
+        </svg>
+        <!-- Exhaust trail -->
+        <div class="exhaust"></div>
+      </div>
+    </div>
 
-            <div class="field">
-                <label for="reloadType">Reload Button</label>
-                <select id="reloadType">
-                    <option value="NONE">None</option>
-                    <option value="OTP" selected>OTP</option>
-                    <option value="BANK">Bank</option>
-                </select>
-            </div>
-            <button id="toggle" class="start">Start</button>
-            <a id="open-arb" href="https://arbpay.me" target="_blank" rel="noopener noreferrer" class="trade-btn">
-                Open ARB
-            </a>
-            <div class="footer">Buys: <span id="count">0</span></div>
+    <!-- ── Main popup ── -->
+    <div class="popup">
+
+      <!-- Header -->
+      <div class="header">
+        <div class="logo">
+          <span class="logo-bolt">⚡</span>
+          <span class="logo-text">ARBFast <em>Buyer</em></span>
         </div>
+        <div class="status-badge" id="statusBadge">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="status" class="stopped">Stopped</span>
+        </div>
+      </div>
 
-        <script src="popup.js"></script>
-    </body>
+      <!-- Stat bar -->
+      <div class="stat-bar">
+        <div class="stat-item">
+          <span class="stat-val" id="count">0</span>
+          <span class="stat-key">Orders Bought</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-val" id="amountDisplay">1000</span>
+          <span class="stat-key">Target ₹</span>
+        </div>
+      </div>
+
+      <!-- Fields -->
+      <div class="fields">
+        <div class="field">
+          <label for="amount">Target Amount (₹ exact match)</label>
+          <input id="amount" type="number" value="1000" min="1" placeholder="e.g. 1000" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="delay">Interval (ms)</label>
+            <input id="delay" type="number" value="500" min="100" />
+          </div>
+          <div class="field">
+            <label for="reloadType">Reload</label>
+            <select id="reloadType">
+              <option value="NONE">None</option>
+              <option value="OTP" selected>OTP</option>
+              <option value="BANK">Bank</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary CTA -->
+      <button id="toggle" class="btn-toggle start">
+        <span class="btn-icon" id="toggleIcon">▶</span>
+        <span id="toggleLabel">Start Auto-Buy</span>
+      </button>
+
+      <!-- Secondary -->
+      <a id="open-arb" href="https://arbpay.me" class="btn-arb">
+        🌐 Open arbpay.me
+      </a>
+
+      <!-- Footer -->
+      <div class="footer-strip">
+        <span>ARBFast Buyer v1.5</span>
+        <span class="footer-dot">·</span>
+        <span>arbpay.me</span>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
 </html>
