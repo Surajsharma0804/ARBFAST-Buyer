@@ -26,8 +26,10 @@ ARBFast Buyer operates entirely **locally within your browser**. It automates bu
 The Extension requests only the minimum permissions required to function:
 - **activeTab** — to interact with the currently active ARB tab
 - **scripting** — to inject automation scripts on the ARB website
+- **storage** — to save your target amount, interval, and reload settings locally in your browser
+- **tabs** — to open the arbpay.me website when you click "Open arbpay.me"
 
-These permissions are used solely to provide the core automation functionality.
+These permissions are used solely to provide the core automation functionality. No data from these permissions is transmitted outside your browser.
 
 ## Third-Party Services
 
