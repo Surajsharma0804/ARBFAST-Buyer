@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ARBFast Buyer",
   "version": "1.5",
-  "description": "Automatically buy ARB orders on arbpay.me at your exact target amount.",
+  "description": "Automatically buy ARB orders on arbpay.me at your exact target amount",
   "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "host_permissions": ["https://arbpay.me/*"],
   "action": { "default_popup": "popup.html" },
